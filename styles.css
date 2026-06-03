@@ -291,3 +291,100 @@ footer {
     transform: translateY(0) scale(1);
   }
 }
+
+/* -----------------------------
+   Hero Motion
+----------------------------- */
+
+.device-card img {
+    animation: subtlePanZoom 18s ease-in-out infinite alternate;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+@keyframes subtlePanZoom {
+    0% {
+        transform: scale(1) translate3d(0px, 0px, 0px);
+    }
+
+    50% {
+        transform: scale(1.03) translate3d(-4px, -2px, 0px);
+    }
+
+    100% {
+        transform: scale(1.06) translate3d(4px, 2px, 0px);
+    }
+}
+
+/* -----------------------------
+   H/AI Framework
+----------------------------- */
+
+.framework-section {
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.framework-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.framework-intro p {
+    margin-bottom: 1.4rem;
+}
+
+.framework-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    opacity: 0.7;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.framework-card {
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+    border-radius: 18px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.framework-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.18);
+}
+
+.framework-card h3 {
+    margin-bottom: 0.8rem;
+}
+
+.framework-principle {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.framework-principle blockquote {
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+@media (max-width: 900px) {
+    .framework-header {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

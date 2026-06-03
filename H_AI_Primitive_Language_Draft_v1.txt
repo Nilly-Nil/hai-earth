@@ -1,0 +1,278 @@
+﻿H/AI Primitive Language Draft v1
+June 2nd, 2026
+
+
+H/AI Primitive Language (Draft v1)
+The H/AI Primitive Language describes how human interaction is organized, traversed, interrupted, resumed, committed, and remembered across time. It is intentionally domain-independent and may be applied to conversational systems, educational systems, travel planning, authoring environments, assessment systems, personal assistants, and other human-AI interaction models.
+
+
+Timestamp
+Definition
+A unique temporal identifier associated with a Traversal Point. A Timestamp establishes when a State existed and allows traversal to be navigated through time.
+
+
+Examples
+* 2026-06-02 14:03:22
+* 2026-06-02 14:05:41
+* 2026-06-02 14:12:18 
+
+
+
+
+Enables:
+* Historical navigation
+* State identification
+* Temporal recall
+* Provenance
+* Traversal sequencing
+
+
+
+
+Note: A Timestamp represents a moment in time and is independent of its storage or display format. System representations may differ from human-readable representations and may be rendered according to timezone, locale, precision, or implementation requirements.
+
+
+System Representation:
+2026-06-02T18:03:22.123456Z
+
+
+Human Representation:
+June 2, 2026
+2:03 PM EDT
+
+
+Human Representation:
+Tuesday, June 2, 2026
+14:03:22
+
+
+
+
+Domain
+Definition
+The contextual space within which interaction occurs. A Domain organizes related States and Traversal Points into a common area of activity.
+
+
+Examples
+* Travel
+* Reading
+* Education
+* Assessment
+* Training
+* Finance
+* Person
+* Authoring 
+
+
+Enables:
+* Context organization
+* Traversal categorization
+* State grouping
+
+
+Sub-domain
+
+
+Definition
+A specialization of a Domain. Sub-domains provide additional contextual precision within a Domain.
+
+
+Examples:
+* Travel
+└─ Destination Selection 
+
+
+* Travel  
+└─ Reservation Management
+
+
+* Reading
+└─ Active Reading
+
+
+* Reading
+└─ Reading Selection
+
+
+* Person  
+└─ Identity
+
+
+* Person  
+└─ Preferences 
+
+
+Enables:
+* Granular organization
+* Domain specialization
+* Precise state classification
+
+
+State
+
+
+Definition
+Any and all data at a point of mutation. A State represents the complete condition of a Domain and Sub-domain immediately following a change.
+
+
+Examples
+* Travel State:  Destination = Hawaii, Duration = 5 Days, Travelers = 4 
+* Reading State:  Book = Moby Dick, Paragraph = 27 
+* Person State:  Hair Color = Brown, Eye Color = Green 
+
+
+Enables:
+* Information persistence
+* Mutation tracking
+* Traversal generation
+
+
+Traversal Point
+Definition
+A timestamped State representing a unique location within Traversal.
+
+
+Formula:
+* Traversal Point = Timestamp + State 
+
+
+Examples:
+* Timestamp: 2026-06-02 14:03  State: Reading Paragraph 27 
+* Timestamp: 2026-06-02 14:15  State: Travel Destination = Hawaii 
+
+
+Enables:
+* Historical navigation
+* Resumption
+* Temporal recall
+* Provenance
+
+
+Traversal
+
+
+Definition
+The sequential ordering of Traversal Points, always progressing forward in time. Traversal describes movement through interaction history.
+
+
+Examples:
+* TP1 → TP2 → TP3 → TP4 
+* Reading Selection → Active Reading → Interruption → Resumption → Continue Reading 
+
+
+Enables:
+* Interaction continuity
+* Experience navigation
+* Historical reconstruction
+
+
+Command
+
+
+Definition:
+An instruction that causes State mutation. Commands initiate traversal activity.
+
+
+Examples:
+* Start Reading
+* Book Hotel
+* Send Email
+* Resume Reading
+* Show Previous Itinerary 
+
+
+Enables:
+* State mutation
+* Traversal creation
+* User agency
+
+
+Interruption
+
+
+Definition
+A non-linear progression that departs from the active Traversal.
+
+
+Examples
+* Reading  ↓  What time is my flight tomorrow? 
+* Travel Planning  ↓  Send an Email 
+
+
+Enables:
+* Context switching
+* Non-linear interaction
+* State preservation
+
+
+Resumption
+
+
+Definition
+Continuation of Traversal generated from a previously recorded Traversal Point. Resumption does not return to a prior Traversal Point. Instead, it creates a new Traversal Point using State derived from an earlier Traversal Point.
+
+
+Example:
+* Reading Paragraph 27  ↓  Travel Planning  ↓  Resume Reading  ↓  Reading Paragraph 27 (New Timestamp) 
+
+
+Enables:
+* Continuity
+* Long-duration interaction
+* State replication
+* Temporal navigation
+
+
+Commitment Point
+Definition
+A Traversal Point at which future State mutation produces external consequence. A Commitment Point represents the transition from reversible exploration to consequential action.
+
+
+Examples
+* Book Hotel
+* Purchase Ticket
+* Submit Application
+* Send Email
+* Publish Content 
+
+
+Enables:
+* Decision finalization
+* Consequence management
+* Transaction awareness
+
+
+
+
+External Action
+
+
+Definition
+A consequence-producing operation occurring outside the active Domain. External Actions affect external systems, services, organizations, or real-world outcomes.
+
+
+Examples
+* Charge Credit Card
+* Reserve Hotel
+* Send Email
+* Create Calendar Event
+* Submit Purchase Order
+* Generate Invoice 
+
+
+
+
+Enables:
+* Real-world execution
+* Service integration
+* External system coordination
+
+
+Foundational H/AI Principle
+Any mutation of State within a Domain or Sub-domain receives a Timestamp and creates a new Traversal Point.
+
+
+Ordered Traversal Points form Traversal.
+
+
+All interaction history, memory, interruption, resumption, and provenance emerge from the navigation and interpretation of Traversal Points through time.
