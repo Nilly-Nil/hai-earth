@@ -525,3 +525,53 @@ footer {
     text-transform: uppercase;
 }
 
+.observations-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.observation {
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.02);
+}
+
+.observation-card-header {
+    margin-bottom: 1.5rem;
+}
+
+.observation-author {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.observation blockquote {
+    max-width: none;
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid rgba(255,255,255,0.15);
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+
+    text-align: left;
+}
+
+.observation-question {
+    color: var(--muted);
+    font-size: 1.02rem;
+}
+
+.observations-label {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
