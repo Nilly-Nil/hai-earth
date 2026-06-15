@@ -373,13 +373,18 @@ footer {
     margin-top: 5rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.08);
+    display: grid;
+    place-items: center;
+    text-align: center;
 }
 
 .framework-principle blockquote {
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
+    max-width: 980px;
     font-size: 1.4rem;
     line-height: 1.5;
     opacity: 0.95;
+    text-align: center;
 }
 
 @media (max-width: 900px) {
