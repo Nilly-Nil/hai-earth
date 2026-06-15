@@ -533,9 +533,9 @@ footer {
 
 .observation {
     padding: 2rem;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .observation-card-header {
@@ -553,7 +553,7 @@ footer {
     max-width: none;
     margin: 1rem 0 1.5rem;
     padding-left: 1.25rem;
-    border-left: 3px solid rgba(255,255,255,0.15);
+    border-left: 3px solid rgba(255, 255, 255, 0.15);
 
     font-size: 1.4rem;
     font-weight: 500;
@@ -574,4 +574,91 @@ footer {
     font-size: 0.85rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+}
+
+/* -----------------------------
+   Demonstrations
+----------------------------- */
+
+.demonstrations-section {
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.demonstrations-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.demonstrations-intro p {
+    margin-bottom: 1.4rem;
+}
+
+.demonstrations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.demonstration-card {
+    padding: 2rem;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+}
+
+.demonstration-card h3 {
+    margin-bottom: 1rem;
+}
+
+.demonstration-card p {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.demonstration-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.demonstration-link:hover {
+    opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+    .demonstrations-header {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.demonstration-card {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+    transition: transform 0.25s ease;
+}
+
+.demonstration-card:hover {
+    transform: translateY(-4px);
+}
+
+.demonstration-card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.demonstration-card h3 {
+    padding: 1.5rem 1.5rem 0.75rem;
+}
+
+.demonstration-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--muted);
 }
