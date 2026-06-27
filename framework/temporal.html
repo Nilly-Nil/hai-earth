@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>H/AI Primitive Language — Volume I: Temporal Primitives</title><link rel="stylesheet" href="../styles.css"></head><body><main class="site-shell">
+<nav class="spec-nav"><a href="/#framework">← H/AI Framework</a><div><a href="information.html">Information →</a> <a href="behavioral.html">Behavioral →</a></div></nav>
+<header class="spec-header"><p class="eyebrow">H/AI Primitive Language</p><h1>Volume I<br>Temporal Primitives</h1><p class="subtitle">Temporal primitives describe how Human–AI interaction is organized, traversed, interrupted, resumed, committed, and remembered across time.</p><div class="spec-meta"><span>Draft v1.2</span><span>Volume I</span><span>Temporal Structure</span></div></header>
+<section class="section"><h2>Overview</h2><p>The temporal family defines the structure of interaction as it unfolds. It provides a vocabulary for locating an interaction in time, recording state change, preserving continuity, and returning to prior interaction positions after interruption.</p><p>These primitives are intentionally domain-independent. They can describe conversational systems, adaptive interfaces, educational sequences, reservation workflows, readings, visual experiences, task execution, and long-duration Human–AI interaction.</p></section>
+<section class="section"><h2>Primitive Definitions</h2><div class="primitive-grid">
+<article class="primitive-card"><h3>Timestamp</h3><p>A unique temporal identifier associated with a Traversal Point.</p></article>
+<article class="primitive-card"><h3>Domain</h3><p>The contextual space within which interaction occurs.</p></article>
+<article class="primitive-card"><h3>Sub-domain</h3><p>A specialization of a Domain providing additional contextual precision.</p></article>
+<article class="primitive-card"><h3>State</h3><p>The complete condition of a Domain and Sub-domain immediately following mutation.</p></article>
+<article class="primitive-card"><h3>Traversal Point</h3><p>A timestamped State representing a unique location within Traversal.</p></article>
+<article class="primitive-card"><h3>Traversal</h3><p>The sequential ordering of Traversal Points progressing forward through time.</p></article>
+<article class="primitive-card"><h3>Command</h3><p>An instruction that causes State mutation and initiates traversal activity.</p></article>
+<article class="primitive-card"><h3>Interruption</h3><p>A non-linear progression that departs from the active Traversal.</p></article>
+<article class="primitive-card"><h3>Resumption</h3><p>Continuation of Traversal generated from a previously recorded Traversal Point.</p></article>
+<article class="primitive-card"><h3>Commitment Point</h3><p>A Traversal Point at which future mutation produces external consequence.</p></article>
+<article class="primitive-card"><h3>External Action</h3><p>A consequence-producing operation affecting external systems or real-world outcomes.</p></article>
+</div></section>
+<section class="section"><h2>Foundational Principle</h2><div class="callout"><p>Any mutation of State within a Domain or Sub-domain receives a Timestamp and creates a new Traversal Point. Ordered Traversal Points form Traversal. Interaction history, continuity, interruption, resumption, and provenance emerge from navigation through Traversal Points over time.</p></div></section>
+<section class="section"><h2>Interaction Example</h2><p>A reading is active. A user interrupts to make a restaurant reservation. The system preserves the reading state, enters the reservation domain, completes the reservation, then resumes the reading from the exact Traversal Point where it was interrupted.</p><div class="diagram"><pre>Reading Domain
+    Traversal Point 04
+        State: Reading Asimov segment 3
+        Visual: laws_3.png
+        Speech: active
+
+↓ Interruption
+
+Reservation Domain
+    Traversal Point 05
+        State: Selecting restaurant
+
+    Traversal Point 06
+        State: Reservation confirmed
+
+↓ Resumption
+
+Reading Domain
+    Traversal Point 07
+        Generated from Traversal Point 04
+        State: Continue reading segment 3</pre></div></section>
+<nav class="next-nav"><a href="/#framework"><strong>Back</strong>H/AI Framework</a><a href="information.html"><strong>Next Volume</strong>Information Primitives</a></nav>
+</main></body></html>

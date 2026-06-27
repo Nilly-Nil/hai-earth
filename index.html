@@ -57,7 +57,7 @@
         <a href="#projects">Projects</a>
         <a href="#demonstrations">Demonstrations</a>
         <a href="#research">Research</a>
-        <a href="#framework">h/ai Language</a>
+        <a href="#framework">Framework</a>
         <a href="#observations">Observations</a>
         <a href="#people">People</a>
         <a href="#contact">Contact</a>
@@ -310,95 +310,137 @@
         <div class="framework-header">
             <div>
                 <p class="eyebrow eyebrow-framework">h/ai FRAMEWORK</p>
-                <h2>Primitive Language — Draft v1</h2>
+                <h2>h/ai Primitive Language</h2>
             </div>
 
             <div class="framework-intro">
                 <p>
-                    The h/ai Primitive Language describes how human interaction is organized,
-                    traversed, interrupted, resumed, committed, and remembered across time.
+
+                    The h/ai Primitive Language is a domain-independent vocabulary for describing Human–AI interaction.
+
+                    Rather than describing specific implementations or technologies,
+                    the framework models interaction itself through a collection of
+                    fundamental primitives.
+
                 </p>
 
                 <p>
-                    The framework is intentionally domain-independent and is designed to model
-                    persistent human/AI interaction across conversational systems, education,
-                    travel planning, adaptive interfaces, authoring systems, and long-duration
-                    interactive experiences.
+
+                    Those primitives are organized into complementary Primitive Families
+                    that describe how interaction unfolds through time, how information is
+                    represented and communicated, and how intelligent systems reason,
+                    plan, and act.
+
+                    Together, these families provide a common language for describing
+                    Human–AI interaction across conversational systems, education,
+                    robotics, accessibility, adaptive interfaces, authoring systems,
+                    and other interactive environments.
+
                 </p>
 
                 <div class="framework-meta">
-                    <span>Draft v1</span>
-                    <span>Published June 3, 2026</span>
+                    <span>Published June 27, 2026</span>
                 </div>
             </div>
         </div>
 
-        <div class="framework-grid">
-            <article class="framework-card">
-                <h3>Timestamp</h3>
-                <p>A unique temporal identifier associated with a Traversal Point.</p>
-            </article>
+        <div class="framework-families">
+            <p class="framework-family-intro">
 
-            <article class="framework-card">
-                <h3>Domain</h3>
-                <p>The contextual space within which interaction occurs.</p>
-            </article>
+                <strong>Three Primitive Families</strong><br><br>
 
-            <article class="framework-card">
-                <h3>Sub-domain</h3>
-                <p>A specialization of a Domain providing additional contextual precision.</p>
-            </article>
+                The Primitive Language is intentionally modular.
 
-            <article class="framework-card">
-                <h3>State</h3>
-                <p>The complete condition of a Domain and Sub-domain immediately following mutation.</p>
-            </article>
+                Each primitive belongs to one of three complementary families. Together these families form a complete
+                description of Human–AI  interaction while remaining independent enough to evolve individually over time.
 
-            <article class="framework-card">
-                <h3>Traversal Point</h3>
-                <p>A timestamped State representing a unique location within Traversal.</p>
-            </article>
+            </p>
 
-            <article class="framework-card">
-                <h3>Traversal</h3>
-                <p>The sequential ordering of Traversal Points progressing forward through time.</p>
-            </article>
+            <a class="family-card" href="/framework/temporal.html">
+                <h3>Temporal</h3>
 
-            <article class="framework-card">
-                <h3>Command</h3>
-                <p>An instruction that causes State mutation and initiates traversal activity.</p>
-            </article>
+                <p>
+                    Models how interaction evolves across time.
+                </p>
 
-            <article class="framework-card">
-                <h3>Interruption</h3>
-                <p>A non-linear progression that departs from the active Traversal.</p>
-            </article>
+                <ul>
+                    <li>State</li>
+                    <li>Traversal</li>
+                    <li>Interruption</li>
+                    <li>Resumption</li>
+                    <li>Commitment</li>
+                    <li>Timestamp</li>
+                </ul>
 
-            <article class="framework-card">
-                <h3>Resumption</h3>
-                <p>Continuation of Traversal generated from a previously recorded Traversal Point.</p>
-            </article>
+                <div class="family-volume">
+                    <div class="volume-label">Volume I</div>
+                    <div class="volume-title">Foundations of Time</div>
+                </div>
+            </a>
 
-            <article class="framework-card">
-                <h3>Commitment Point</h3>
-                <p>A Traversal Point at which future mutation produces external consequence.</p>
-            </article>
 
-            <article class="framework-card">
-                <h3>External Action</h3>
-                <p>A consequence-producing operation affecting external systems or real-world outcomes.</p>
-            </article>
+            <a class="family-card" href="/framework/information.html">
+
+                <h3>Information</h3>
+
+                <p>
+                    Models how information is acquired, represented, transformed, and communicated.
+                </p>
+
+                <ul>
+                    <li>Language</li>
+                    <li>Modality</li>
+                    <li>Representation</li>
+                    <li>Intent</li>
+                    <li>Context</li>
+                    <li>Transformation</li>
+                </ul>
+
+                <div class="family-volume">
+                    <div class="volume-label">Volume II</div>
+                    <div class="volume-title">Information Flow</div>
+                </div>
+
+            </a>
+
+
+            <a class="family-card" href="/framework/behavioral.html">
+
+                <h3>Behavioral</h3>
+
+                <p>
+                    Models reasoning, memory, planning, and action.
+                </p>
+
+                <ul>
+                    <li>Goal</li>
+                    <li>Constraint</li>
+                    <li>Memory</li>
+                    <li>Inference</li>
+                    <li>Planning</li>
+                </ul>
+
+                <div class="family-volume">
+                    <div class="volume-label">Volume III</div>
+                    <div class="volume-title">Intelligent Behavior</div>
+                </div>
+
+            </a>
+
         </div>
 
         <div class="framework-principle">
             <p class="eyebrow">Foundational Principle</p>
 
             <blockquote>
-                Any mutation of State within a Domain or Sub-domain receives a Timestamp and creates a new Traversal
-                Point.
-                Ordered Traversal Points form Traversal.
-                Interaction history, continuity, interruption, resumption, and provenance emerge from navigation
-                through Traversal Points over time.
+
+                Human–AI interaction can be described independently of any  implementation technology.
+
+                The h/ai Primitive Language defines that interaction through a small collection of orthogonal primitives
+                organized into Temporal, Information, and Behavioral families.
+
+                Complex interaction emerges from combinations of simple primitives.
+
             </blockquote>
         </div>
     </section>
