@@ -1,19 +1,57 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>H/AI Primitive Language — Volume III: Behavioral Primitives</title><link rel="stylesheet" href="../styles.css"></head><body><main class="site-shell">
-<nav class="spec-nav"><a href="/#framework">← H/AI Framework</a><div><a href="temporal.html">Temporal →</a> <a href="information.html">Information →</a></div></nav>
-<header class="spec-header"><p class="eyebrow">H/AI Primitive Language</p><h1>Volume III<br>Behavioral Primitives</h1><p class="subtitle">Behavioral primitives describe how intelligent systems reason, plan, remember, prioritize, and act while interacting with people.</p><div class="spec-meta"><span>Draft v0.1</span><span>Volume III</span><span>Behavioral Structure</span><span>Under active development</span></div></header>
-<section class="section"><h2>Overview</h2><p>The behavioral family is the third branch of the H/AI Primitive Language. Temporal primitives describe how interaction unfolds across time. Information primitives describe how meaning moves across representations. Behavioral primitives describe how systems decide what to do.</p><p>This portion of the framework remains under active development. The terms below identify the emerging behavioral vocabulary already visible in Human–AI interaction systems that clarify intent, resolve ambiguity, manage constraints, remember context, and select actions.</p></section>
-<section class="section"><h2>Primitive Definitions — Draft</h2><div class="primitive-grid">
-<article class="primitive-card"><h3>Goal</h3><p>The desired outcome toward which interaction or system behavior is directed.</p></article>
-<article class="primitive-card"><h3>Constraint</h3><p>A condition limiting which actions, outputs, or interpretations are acceptable.</p></article>
-<article class="primitive-card"><h3>Memory</h3><p>Information retained from prior interaction and made available to future behavior.</p></article>
-<article class="primitive-card"><h3>Inference</h3><p>The derivation of unstated meaning, missing information, or likely next action from available context.</p></article>
-<article class="primitive-card"><h3>Planning</h3><p>The organization of future steps required to reach a goal under known constraints.</p></article>
-<article class="primitive-card"><h3>Preference</h3><p>A user, system, or context-specific tendency that influences action selection.</p></article>
-<article class="primitive-card"><h3>Agency</h3><p>The degree to which a system may initiate, recommend, defer, or execute action.</p></article>
-<article class="primitive-card"><h3>Policy</h3><p>A rule governing allowable behavior, escalation, refusal, or external consequence.</p></article>
-</div></section>
-<section class="section"><h2>Example: Missing Information in an Order</h2><p>A customer gives an order that appears complete but lacks a required preparation detail. The system infers that the missing detail must be resolved before committing the order.</p><div class="diagram"><pre>Customer Input
-
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>h/ai Primitive Language — Volume IV: Behavioral Primitives</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<main class="site-shell">
+    <nav class="spec-nav"><a href="/#framework">← h/ai Framework</a>
+        <div><a href="temporal.html">Temporal →</a> <a href="information.html">Information →</a></div>
+    </nav>
+    <header class="spec-header"><p class="eyebrow">H/AI Primitive Language</p>
+        <h1>Volume IV<br>Behavioral Primitives</h1>
+        <p class="subtitle">Behavioral primitives describe how intelligent systems reason, plan, remember, prioritize,
+            and act while interacting with people.</p>
+        <div class="spec-meta"><span>Draft v0.1</span><span>Volume IV</span><span>Behavioral Structure</span><span>Under active development</span>
+        </div>
+    </header>
+    <section class="section"><h2>Overview</h2>
+        <p>The behavioral family is the third branch of the h/ai Primitive Language. Temporal primitives describe how
+            interaction unfolds across time. Information primitives describe how meaning moves across representations.
+            Behavioral primitives describe how systems decide what to do.</p>
+        <p>This portion of the framework remains under active development. The terms below identify the emerging
+            behavioral vocabulary already visible in Human–AI interaction systems that clarify intent, resolve
+            ambiguity, manage constraints, remember context, and select actions.</p></section>
+    <section class="section"><h2>Primitive Definitions — Draft</h2>
+        <div class="primitive-grid">
+            <article class="primitive-card"><h3>Goal</h3>
+                <p>The desired outcome toward which interaction or system behavior is directed.</p></article>
+            <article class="primitive-card"><h3>Inference</h3>
+                <p>The derivation of unstated meaning, missing information, or likely next action from available
+                    context.</p></article>
+            <article class="primitive-card"><h3>Planning</h3>
+                <p>The organization of future steps required to reach a goal under known constraints.</p></article>
+            <article class="primitive-card"><h3>Decision</h3>
+                <p>A determination selecting one course of action from available alternatives.</p></article>
+            <article class="primitive-card"><h3>Preference</h3>
+                <p>A user, system, or context-specific tendency that influences action selection.</p></article>
+            <article class="primitive-card"><h3>Policy</h3>
+                <p>A rule governing allowable behavior, escalation, refusal, or external consequence.</p></article>
+            <article class="primitive-card"><h3>Learning</h3>
+                <p>Modification of future behavior resulting from experience or acquired information.</p></article>
+            <article class="primitive-card"><h3>Memory</h3>
+                <p>Information retained from prior interaction and made available to future behavior.</p></article>
+            <article class="primitive-card"><h3>Action</h3>
+                <p>Execution of behavior that produces an effect within or beyond the interaction.</p></article>
+        </div>
+    </section>
+    <section class="section"><h2>Example: Missing Information in an Order</h2>
+        <p>A customer gives an order that appears complete but lacks a required preparation detail. The system infers
+            that the missing detail must be resolved before committing the order.</p>
+        <div class="diagram"><pre>Customer Input
     "I'll have a bagel with whitefish salad and a large coffee."
 
         ↓
@@ -45,8 +83,14 @@ Planning
 
 Action
 
-    "Do you want the bagel toasted?"</pre></div></section>
-<section class="section"><h2>Behavioral Relationship to Temporal Primitives</h2><p>Behavioral primitives frequently determine when a Traversal Point becomes a Commitment Point. A system may continue asking clarifying questions until required constraints are satisfied. Once satisfied, the interaction can safely produce external consequence.</p><div class="diagram"><pre>Traversal Point
+    "Do you want the bagel toasted?"</pre>
+        </div>
+    </section>
+    <section class="section"><h2>Behavioral Relationship to Temporal Primitives</h2>
+        <p>Behavioral primitives frequently determine when a Traversal Point becomes a Commitment Point. A system may
+            continue asking clarifying questions until required constraints are satisfied. Once satisfied, the
+            interaction can safely produce external consequence.</p>
+        <div class="diagram"><pre>Traversal Point
 
     State:
         Order pending
@@ -70,8 +114,13 @@ Traversal Point
 Commitment Point
 
     External Action:
-        Submit order to kitchen</pre></div></section>
-<section class="section"><h2>Behavioral Relationship to Information Primitives</h2><p>Behavioral reasoning depends on information that may arrive through multiple modalities and representations. A system may infer intent from speech, visual context, gesture, text, memory, or external data.</p><div class="diagram"><pre>Information
+        Submit order to kitchen</pre>
+        </div>
+    </section>
+    <section class="section"><h2>Behavioral Relationship to Information Primitives</h2>
+        <p>Behavioral reasoning depends on information that may arrive through multiple modalities and representations.
+            A system may infer intent from speech, visual context, gesture, text, memory, or external data.</p>
+        <div class="diagram"><pre>Information
 
     Speech:
         "Make it like last time."
@@ -98,7 +147,16 @@ Policy
 
 Action
 
-    "Last time you had it toasted on sesame. Should I use that again?"</pre></div></section>
-<section class="section"><h2>Behavioral Principle</h2><div class="callout"><p>Human–AI systems should not merely produce responses. They should reason about goals, constraints, memory, policy, and consequence before acting. Intelligent behavior emerges when action selection is grounded in context and constrained by human intent.</p></div></section>
-<nav class="next-nav"><a href="information.html"><strong>Previous Volume</strong>Information Primitives</a><a href="/#framework"><strong>Back</strong>H/AI Framework</a></nav>
-</main></body></html>
+    "Last time you had it toasted on sesame. Should I use that again?"</pre>
+        </div>
+    </section>
+    <section class="section"><h2>Behavioral Principle</h2>
+        <div class="callout"><p>Human–AI systems should not merely produce responses. They should reason about goals,
+            constraints, memory, policy, and consequence before acting. Intelligent behavior emerges when action
+            selection is grounded in context and constrained by human intent.</p></div>
+    </section>
+    <nav class="next-nav"><a href="information.html"><strong>Previous Volume</strong>Information Primitives</a><a
+            href="/#framework"><strong>Back</strong>h/ai Framework</a></nav>
+</main>
+</body>
+</html>

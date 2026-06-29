@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>H/AI Primitive Language — Volume I: Temporal Primitives</title>
+    <title>h/ai Primitive Language — Volume V: Temporal Primitives</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 <main class="site-shell">
-    <nav class="spec-nav"><a href="/#framework">← H/AI Framework</a>
+    <nav class="spec-nav"><a href="/#framework">← h/ai Framework</a>
         <div><a href="information.html">Information →</a> <a href="behavioral.html">Behavioral →</a></div>
     </nav>
     <header class="spec-header"><p class="eyebrow">H/AI Primitive Language</p>
-        <h1>Volume I<br>Temporal Primitives</h1>
+        <h1>Volume V<br>Temporal Primitives</h1>
         <p class="subtitle">Temporal primitives describe how Human–AI interaction is organized, traversed, interrupted,
             resumed, committed, and remembered across time.</p>
-        <div class="spec-meta"><span>Draft v1.2</span><span>Volume I</span><span>Temporal Structure</span></div>
+        <div class="spec-meta"><span>Draft v1.2</span><span>Volume V</span><span>Temporal Structure</span></div>
     </header>
     <section class="section"><h2>Overview</h2>
         <p>The temporal family defines the structure of interaction as it unfolds. It provides a vocabulary for locating
@@ -28,34 +28,21 @@
         <div class="primitive-grid">
             <article class="primitive-card"><h3>Timestamp</h3>
                 <p>A unique temporal identifier associated with a Traversal Point.</p></article>
-            <article class="primitive-card"><h3>Domain</h3>
-                <p>The contextual space within which interaction occurs.</p></article>
-            <article class="primitive-card"><h3>Sub-domain</h3>
-                <p>A specialization of a Domain providing additional contextual precision.</p></article>
-            <article class="primitive-card"><h3>State</h3>
-                <p>The complete condition of a Domain and Sub-domain immediately following mutation.</p></article>
-            <article class="primitive-card"><h3>Traversal Point</h3>
-                <p>A timestamped State representing a unique location within Traversal.</p></article>
-            <article class="primitive-card"><h3>Traversal</h3>
-                <p>The sequential ordering of Traversal Points progressing forward through time.</p></article>
-            <article class="primitive-card"><h3>Command</h3>
-                <p>An instruction that causes State mutation and initiates traversal activity.</p></article>
-            <article class="primitive-card"><h3>Interruption</h3>
-                <p>A non-linear progression that departs from the active Traversal.</p></article>
-            <article class="primitive-card"><h3>Resumption</h3>
-                <p>Continuation of Traversal generated from a previously recorded Traversal Point.</p></article>
-            <article class="primitive-card"><h3>Commitment Point</h3>
-                <p>A Traversal Point at which future mutation produces external consequence.</p></article>
-            <article class="primitive-card"><h3>External Action</h3>
-                <p>A consequence-producing operation affecting external systems or real-world outcomes.</p></article>
             <article class="primitive-card"><h3>Sequence</h3>
                 <p>The ordered relationship between Traversal Points, defining the progression of interaction
                     independent of elapsed time.</p></article>
             <article class="primitive-card"><h3>Duration</h3>
                 <p>The measurable temporal interval associated with a State, Traversal, or interaction between two
                     Traversal Points.</p></article>
+            <article class="primitive-card"><h3>Transition</h3>
+                <p>Movement from one State or Domain to another during Traversal.</p></article>
+            <article class="primitive-card"><h3>Traversal</h3>
+                <p>The sequential ordering of Traversal Points progressing forward through time.</p></article>
+            <article class="primitive-card"><h3>Commitment</h3>
+                <p>A Traversal Point at which future mutation produces external consequence.</p></article>
         </div>
     </section>
+
     <section class="section"><h2>Foundational Principle</h2>
         <div class="callout"><p>Any mutation of State within a Domain or Sub-domain receives a Timestamp and creates a
             new Traversal Point. Ordered Traversal Points form Traversal. Interaction history, continuity, interruption,
@@ -88,7 +75,7 @@ Reading Domain
         State: Continue reading segment 3</pre>
         </div>
     </section>
-    <nav class="next-nav"><a href="/#framework"><strong>Back</strong>H/AI Framework</a><a
+    <nav class="next-nav"><a href="/#framework"><strong>Back</strong>h/ai Framework</a><a
             href="information.html"><strong>Next Volume</strong>Information Primitives</a></nav>
 </main>
 </body>

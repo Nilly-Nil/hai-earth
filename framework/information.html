@@ -1,17 +1,76 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>H/AI Primitive Language — Volume II: Information Primitives</title><link rel="stylesheet" href="../styles.css"></head><body><main class="site-shell">
-<nav class="spec-nav"><a href="/#framework">← H/AI Framework</a><div><a href="temporal.html">Temporal →</a> <a href="behavioral.html">Behavioral →</a></div></nav>
-<header class="spec-header"><p class="eyebrow">H/AI Primitive Language</p><h1>Volume II<br>Information Primitives</h1><p class="subtitle">Information primitives describe how meaning is acquired, represented, transformed, preserved, and communicated across Human–AI systems.</p><div class="spec-meta"><span>Draft v0.1</span><span>Volume II</span><span>Information Flow</span></div></header>
-<section class="section"><h2>Overview</h2><p>Information primitives model how meaning moves through a Human–AI system independently of temporal traversal. They separate the channel used to acquire or deliver information from the representation used to encode it.</p><p>This distinction becomes critical in multilingual, multimodal, and accessibility-aware systems where the same intent may move through speech, text, vision, gesture, captions, internal commands, and external action systems simultaneously.</p></section>
-<section class="section"><h2>Primitive Definitions</h2><div class="primitive-grid">
-<article class="primitive-card"><h3>Modality</h3><p>The sensory or interaction channel through which information is acquired or delivered.</p></article>
-<article class="primitive-card"><h3>Representation</h3><p>The encoding used to express information within or across modalities.</p></article>
-<article class="primitive-card"><h3>Intent</h3><p>The semantic objective preserved throughout interpretation, transformation, and action.</p></article>
-<article class="primitive-card"><h3>Transformation</h3><p>Conversion between modalities or representations while preserving intent.</p></article>
-<article class="primitive-card"><h3>Context</h3><p>The situational interpretation attached to information within a specific interaction.</p></article>
-</div></section>
-<section class="section"><h2>Modality Examples</h2><p>Modality defines the channel, not the language.</p><ul class="spec-list"><li>Speech</li><li>Text</li><li>Vision</li><li>Gesture</li><li>Touch</li><li>Audio</li><li>Video</li></ul></section>
-<section class="section"><h2>Representation Examples</h2><p>Representation defines the encoding used to express meaning.</p><ul class="spec-list"><li>English</li><li>Japanese</li><li>Italian</li><li>ASL</li><li>Braille</li><li>JSON</li><li>Emoji</li><li>System command language</li></ul></section>
-<section class="section"><h2>Example: Cross-Modality Transformation</h2><p>A user may provide input through vision using ASL while the system responds through speech using Japanese. The modality changes, the representation changes, but intent is preserved.</p><div class="diagram"><pre>Input
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>h/ai Primitive Language — Volume III: Information Primitives</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<main class="site-shell">
+    <nav class="spec-nav"><a href="/#framework">← h/ai Framework</a>
+        <div><a href="temporal.html">Temporal →</a> <a href="behavioral.html">Behavioral →</a></div>
+    </nav>
+    <header class="spec-header"><p class="eyebrow">h/ai Primitive Language</p>
+        <h1>Volume III<br>Information Primitives</h1>
+        <p class="subtitle">Information primitives describe how meaning is acquired, represented, transformed,
+            preserved, and communicated across Human–AI systems.</p>
+        <div class="spec-meta"><span>Draft v0.1</span><span>Volume III</span><span>Information Flow</span></div>
+    </header>
+    <section class="section"><h2>Overview</h2>
+        <p>Information primitives model how meaning moves through a Human–AI system independently of temporal traversal.
+            They separate the channel used to acquire or deliver information from the representation used to encode
+            it.</p>
+        <p>This distinction becomes critical in multilingual, multimodal, and accessibility-aware systems where the same
+            intent may move through speech, text, vision, gesture, captions, internal commands, and external action
+            systems simultaneously.</p></section>
+    <section class="section"><h2>Primitive Definitions</h2>
+        <div class="primitive-grid">
+            <article class="primitive-card"><h3>Language</h3>
+                <p>A structured system for representing and communicating Meaning.</p></article>
+            <article class="primitive-card"><h3>Modality</h3>
+                <p>The sensory or interaction channel through which information is acquired or delivered.</p></article>
+            <article class="primitive-card"><h3>Representation</h3>
+                <p>The encoding used to express information within or across modalities.</p></article>
+            <article class="primitive-card"><h3>Meaning</h3>
+                <p>The interpretation associated with represented information independent of its representation.</p></article>
+            <article class="primitive-card"><h3>Intent</h3>
+                <p>The semantic objective preserved throughout interpretation, transformation, and action.</p></article>
+            <article class="primitive-card"><h3>Context</h3>
+                <p>The situational interpretation attached to information within a specific interaction.</p></article>
+            <article class="primitive-card"><h3>Transformation</h3>
+                <p>Conversion between modalities or representations while preserving intent.</p></article>
+        </div>
+    </section>
+    <section class="section"><h2>Modality Examples</h2>
+        <p>Modality defines the channel, not the language.</p>
+        <ul class="spec-list">
+            <li>Speech</li>
+            <li>Text</li>
+            <li>Vision</li>
+            <li>Gesture</li>
+            <li>Touch</li>
+            <li>Audio</li>
+            <li>Video</li>
+        </ul>
+    </section>
+    <section class="section"><h2>Representation Examples</h2>
+        <p>Representation defines the encoding used to express meaning.</p>
+        <ul class="spec-list">
+            <li>English</li>
+            <li>Japanese</li>
+            <li>Italian</li>
+            <li>ASL</li>
+            <li>Braille</li>
+            <li>JSON</li>
+            <li>Emoji</li>
+            <li>System command language</li>
+        </ul>
+    </section>
+    <section class="section"><h2>Example: Cross-Modality Transformation</h2>
+        <p>A user may provide input through vision using ASL while the system responds through speech using Japanese.
+            The modality changes, the representation changes, but intent is preserved.</p>
+        <div class="diagram"><pre>Input
 
     Modality:
         Vision
@@ -31,8 +90,13 @@ Output
         Speech
 
     Representation:
-        Japanese</pre></div></section>
-<section class="section"><h2>Example: Multilingual Restaurant Interaction</h2><p>A single customer request can produce several simultaneous representations: spoken response, localized display, caption translation, internal system command, and kitchen output.</p><div class="diagram"><pre>Customer Input
+        Japanese</pre>
+        </div>
+    </section>
+    <section class="section"><h2>Example: Multilingual Restaurant Interaction</h2>
+        <p>A single customer request can produce several simultaneous representations: spoken response, localized
+            display, caption translation, internal system command, and kitchen output.</p>
+        <div class="diagram"><pre>Customer Input
 
     Modality:
         Speech
@@ -94,8 +158,32 @@ System Command
         Internal data
 
     Representation:
-        JSON</pre></div></section>
-<section class="section"><h2>Language Roles</h2><p>Language is not a single primitive. It appears as a Representation role attached to different system positions.</p><ul class="spec-list"><li><strong>Input language:</strong> the language used to instruct the system through any modality.</li><li><strong>Spoken language:</strong> the language used in speech input or speech output.</li><li><strong>Displayed language:</strong> the language used in visual interface content.</li><li><strong>Caption language:</strong> the language used for translation or accessibility display.</li><li><strong>System language:</strong> the internal representation used for commands, triggers, intent, or data exchange.</li><li><strong>Output language:</strong> the language used to communicate results to an external person or system.</li></ul></section>
-<section class="section"><h2>Information Principle</h2><div class="callout"><p>Meaning may move across modalities and representations without changing the underlying intent. Human–AI systems must preserve intent while transforming information for users, interfaces, internal reasoning, and external action.</p></div></section>
-<nav class="next-nav"><a href="temporal.html"><strong>Previous Volume</strong>Temporal Primitives</a><a href="behavioral.html"><strong>Next Volume</strong>Behavioral Primitives</a></nav>
-</main></body></html>
+        JSON</pre>
+        </div>
+    </section>
+    <section class="section"><h2>Language Roles</h2>
+        <p>Language is not a single primitive. It appears as a Representation role attached to different system
+            positions.</p>
+        <ul class="spec-list">
+            <li><strong>Input language:</strong> the language used to instruct the system through any modality.</li>
+            <li><strong>Spoken language:</strong> the language used in speech input or speech output.</li>
+            <li><strong>Displayed language:</strong> the language used in visual interface content.</li>
+            <li><strong>Caption language:</strong> the language used for translation or accessibility display.</li>
+            <li><strong>System language:</strong> the internal representation used for commands, triggers, intent, or
+                data exchange.
+            </li>
+            <li><strong>Output language:</strong> the language used to communicate results to an external person or
+                system.
+            </li>
+        </ul>
+    </section>
+    <section class="section"><h2>Information Principle</h2>
+        <div class="callout"><p>Meaning may move across modalities and representations without changing the underlying
+            intent. Human–AI systems must preserve intent while transforming information for users, interfaces, internal
+            reasoning, and external action.</p></div>
+    </section>
+    <nav class="next-nav"><a href="temporal.html"><strong>Previous Volume</strong>Temporal Primitives</a><a
+            href="behavioral.html"><strong>Next Volume</strong>Behavioral Primitives</a></nav>
+</main>
+</body>
+</html>
