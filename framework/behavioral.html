@@ -7,156 +7,317 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+
 <main class="site-shell">
-    <nav class="spec-nav"><a href="/#framework">← h/ai Framework</a>
-        <div><a href="temporal.html">Temporal →</a> <a href="information.html">Information →</a></div>
+
+    <nav class="spec-nav">
+        <a href="/#framework">← h/ai Framework</a>
+        <div>
+            <a href="information.html">← Information</a>
+            <a href="temporal.html">Temporal →</a>
+        </div>
     </nav>
-    <header class="spec-header"><p class="eyebrow">H/AI Primitive Language</p>
+
+    <header class="spec-header">
+
+        <p class="eyebrow">h/ai Primitive Language</p>
+
         <h1>Volume IV<br>Behavioral Primitives</h1>
-        <p class="subtitle">Behavioral primitives describe how intelligent systems reason, plan, remember, prioritize,
-            and act while interacting with people.</p>
-        <div class="spec-meta"><span>Draft v0.1</span><span>Volume IV</span><span>Behavioral Structure</span><span>Under active development</span>
+
+        <p class="subtitle">
+            Behavioral primitives describe how intelligent systems
+            reason, learn, plan, decide, remember, and act.
+        </p>
+
+        <div class="spec-meta">
+            <span>Draft v0.2</span>
+            <span>Volume IV</span>
+            <span>Behavior</span>
         </div>
+
     </header>
-    <section class="section"><h2>Overview</h2>
-        <p>The behavioral family is the third branch of the h/ai Primitive Language. Temporal primitives describe how
-            interaction unfolds across time. Information primitives describe how meaning moves across representations.
-            Behavioral primitives describe how systems decide what to do.</p>
-        <p>This portion of the framework remains under active development. The terms below identify the emerging
-            behavioral vocabulary already visible in Human–AI interaction systems that clarify intent, resolve
-            ambiguity, manage constraints, remember context, and select actions.</p></section>
-    <section class="section"><h2>Primitive Definitions — Draft</h2>
-        <div class="primitive-grid">
-            <article class="primitive-card"><h3>Goal</h3>
-                <p>The desired outcome toward which interaction or system behavior is directed.</p></article>
-            <article class="primitive-card"><h3>Inference</h3>
-                <p>The derivation of unstated meaning, missing information, or likely next action from available
-                    context.</p></article>
-            <article class="primitive-card"><h3>Planning</h3>
-                <p>The organization of future steps required to reach a goal under known constraints.</p></article>
-            <article class="primitive-card"><h3>Decision</h3>
-                <p>A determination selecting one course of action from available alternatives.</p></article>
-            <article class="primitive-card"><h3>Preference</h3>
-                <p>A user, system, or context-specific tendency that influences action selection.</p></article>
-            <article class="primitive-card"><h3>Policy</h3>
-                <p>A rule governing allowable behavior, escalation, refusal, or external consequence.</p></article>
-            <article class="primitive-card"><h3>Learning</h3>
-                <p>Modification of future behavior resulting from experience or acquired information.</p></article>
-            <article class="primitive-card"><h3>Memory</h3>
-                <p>Information retained from prior interaction and made available to future behavior.</p></article>
-            <article class="primitive-card"><h3>Action</h3>
-                <p>Execution of behavior that produces an effect within or beyond the interaction.</p></article>
-        </div>
+
+    <section class="section">
+
+        <h2>Overview</h2>
+
+        <p>
+            Behavioral primitives describe how a Human–AI system
+            transforms available information into decisions and actions.
+            They operate independently of the participants involved,
+            the structure of the interaction domain,
+            the information being communicated,
+            and the temporal progression of interaction.
+        </p>
+
+        <p>
+            Behavioral reasoning consumes information supplied by the
+            other primitive families to infer goals, evaluate constraints,
+            plan future behavior, select actions,
+            and improve future performance through learning.
+        </p>
+
     </section>
-    <section class="section"><h2>Example: Missing Information in an Order</h2>
-        <p>A customer gives an order that appears complete but lacks a required preparation detail. The system infers
-            that the missing detail must be resolved before committing the order.</p>
-        <div class="diagram"><pre>Customer Input
-    "I'll have a bagel with whitefish salad and a large coffee."
 
-        ↓
+    <section class="section">
 
-Intent
+        <h2>Primitive Definitions</h2>
 
-    Place food order.
+        <div class="primitive-grid">
 
-        ↓
+            <article class="primitive-card">
+                <h3>Goal</h3>
+                <p>
+                    The desired outcome toward which behavior is directed.
+                </p>
+            </article>
 
-Constraint
+            <article class="primitive-card">
+                <h3>Inference</h3>
+                <p>
+                    Derivation of conclusions from available information,
+                    memory, context, and domain state.
+                </p>
+            </article>
 
-    Bagel order requires preparation state:
-        toasted / not toasted
+            <article class="primitive-card">
+                <h3>Planning</h3>
+                <p>
+                    Organization of future actions required to achieve a Goal.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Decision</h3>
+                <p>
+                    Selection of a course of action from available alternatives.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Preference</h3>
+                <p>
+                    A learned or defined tendency that influences behavioral selection.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Policy</h3>
+                <p>
+                    Rules governing permissible behavior and external consequence.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Learning</h3>
+                <p>
+                    Modification of future behavior through acquired experience.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Memory</h3>
+                <p>
+                    Previously acquired information made available to future reasoning.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Action</h3>
+                <p>
+                    Execution of behavior producing an internal or external effect.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Example: Missing Information During Ordering</h2>
+
+        <p>
+            A customer appears to have completed an order, but required
+            Domain variables remain unresolved.
+            Behavioral reasoning determines that clarification is required
+            before commitment.
+        </p>
+
+        <div class="diagram">
+
+<pre>Domain State
+
+Bagel
+✓
+
+Spread
+✓
+
+Toast Preference
+Missing
 
         ↓
 
 Inference
 
-    Required information is missing.
+Required information
+is incomplete.
+
+        ↓
+
+Goal
+
+Complete order.
 
         ↓
 
 Planning
 
-    Ask clarification before order commitment.
+Request missing information.
+
+        ↓
+
+Decision
+
+Delay commitment.
 
         ↓
 
 Action
 
-    "Do you want the bagel toasted?"</pre>
+"Would you like your bagel toasted?"</pre>
+
         </div>
+
     </section>
-    <section class="section"><h2>Behavioral Relationship to Temporal Primitives</h2>
-        <p>Behavioral primitives frequently determine when a Traversal Point becomes a Commitment Point. A system may
-            continue asking clarifying questions until required constraints are satisfied. Once satisfied, the
-            interaction can safely produce external consequence.</p>
-        <div class="diagram"><pre>Traversal Point
 
-    State:
-        Order pending
+    <section class="section">
 
-    Constraint:
-        Toasting preference missing
+        <h2>Example: Memory Influencing Behavior</h2>
 
-        ↓
+        <p>
+            Previously stored information may influence future
+            behavioral decisions while still allowing the user
+            to override prior preferences.
+        </p>
 
-Clarification
+        <div class="diagram">
 
-        ↓
+<pre>Memory
 
-Traversal Point
-
-    State:
-        Toasting preference resolved
-
-        ↓
-
-Commitment Point
-
-    External Action:
-        Submit order to kitchen</pre>
-        </div>
-    </section>
-    <section class="section"><h2>Behavioral Relationship to Information Primitives</h2>
-        <p>Behavioral reasoning depends on information that may arrive through multiple modalities and representations.
-            A system may infer intent from speech, visual context, gesture, text, memory, or external data.</p>
-        <div class="diagram"><pre>Information
-
-    Speech:
-        "Make it like last time."
-
-    Memory:
-        Previous order included toasted sesame bagel.
-
-    Context:
-        Restaurant ordering domain.
+Previous order:
+Sesame
+Toasted
 
         ↓
 
 Inference
 
-    User likely wants prior preparation preference.
+Prior preference detected.
 
         ↓
 
 Policy
 
-    Confirm before commitment.
+Confirm before reuse.
+
+        ↓
+
+Decision
+
+Ask user.
 
         ↓
 
 Action
 
-    "Last time you had it toasted on sesame. Should I use that again?"</pre>
+"Last time you ordered
+a toasted sesame bagel.
+Would you like the same today?"</pre>
+
         </div>
+
     </section>
-    <section class="section"><h2>Behavioral Principle</h2>
-        <div class="callout"><p>Human–AI systems should not merely produce responses. They should reason about goals,
-            constraints, memory, policy, and consequence before acting. Intelligent behavior emerges when action
-            selection is grounded in context and constrained by human intent.</p></div>
+
+    <section class="section">
+
+        <h2>Relationship to Other Families</h2>
+
+        <div class="cards">
+
+            <article class="card">
+                <h3>Agency</h3>
+                <p>
+                    Agency identifies who is interacting.
+                    Behavior determines how the system responds.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Domain</h3>
+                <p>
+                    Domain defines available variables,
+                    constraints, and completion state.
+                    Behavior reasons over those structures.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Information</h3>
+                <p>
+                    Information provides Meaning.
+                    Behavior interprets that Meaning
+                    to select decisions and actions.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Temporal</h3>
+                <p>
+                    Temporal determines when
+                    behavioral decisions occur
+                    and when actions become committed.
+                </p>
+            </article>
+
+        </div>
+
     </section>
-    <nav class="next-nav"><a href="information.html"><strong>Previous Volume</strong>Information Primitives</a><a
-            href="/#framework"><strong>Back</strong>h/ai Framework</a></nav>
+
+    <section class="section">
+
+        <h2>Behavioral Principle</h2>
+
+        <div class="callout">
+
+            <p>
+                Human–AI systems should not merely generate responses.
+                They should reason over available information,
+                evaluate goals and constraints,
+                select appropriate actions,
+                and continuously improve future behavior through learning.
+            </p>
+
+        </div>
+
+    </section>
+
+    <nav class="next-nav">
+
+        <a href="information.html">
+            <strong>Previous Volume</strong>
+            Information Primitives
+        </a>
+
+        <a href="temporal.html">
+            <strong>Next Volume</strong>
+            Temporal Primitives
+        </a>
+
+    </nav>
+
 </main>
+
 </body>
 </html>

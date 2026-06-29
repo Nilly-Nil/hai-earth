@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>h/ai Primitive Language — Volume I: Agency Primitives</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<main class="site-shell">
+
+    <nav class="spec-nav">
+        <a href="/#framework">← h/ai Framework</a>
+        <div>
+            <a href="domain.html">Domain →</a>
+        </div>
+    </nav>
+
+    <header class="spec-header">
+        <p class="eyebrow">h/ai Primitive Language</p>
+
+        <h1>Volume I<br>Agency Primitives</h1>
+
+        <p class="subtitle">
+            Agency primitives describe who or what participates in an interaction,
+            how participants are detected, and the conditions under which interaction occurs.
+        </p>
+
+        <div class="spec-meta">
+            <span>Draft v0.1</span>
+            <span>Volume I</span>
+            <span>Agency</span>
+        </div>
+
+    </header>
+
+    <section class="section">
+
+        <h2>Overview</h2>
+
+        <p>
+            The Agency family defines the participants within Human–AI interaction independently of
+            implementation technology. It establishes the conditions required before interaction can occur,
+            including detection, identity, participation, authority, and availability.
+        </p>
+
+        <p>
+            Agency primitives answer a fundamental question:
+            <strong>Who or what is participating in this interaction?</strong>
+        </p>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Primitive Definitions</h2>
+
+        <div class="primitive-grid">
+
+            <article class="primitive-card">
+                <h3>Detection</h3>
+                <p>Recognition that a potential participant or interaction source exists.</p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Presence</h3>
+                <p>The existence of a detectable participant within an interaction.</p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Identity</h3>
+                <p>The characteristics that uniquely distinguish one participant from another.</p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Source</h3>
+                <p>The origin from which interaction is initiated.</p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Participation</h3>
+                <p>The manner in which a participant contributes to an interaction.</p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Role</h3>
+                <p>The function performed by a participant within an interaction.</p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Authority</h3>
+                <p>The decision-making capability assigned to a participant.</p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Attention</h3>
+                <p>The degree to which a participant is focused on an interaction.</p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Engagement</h3>
+                <p>The current level of active participation within an interaction.</p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Availability</h3>
+                <p>The readiness of a participant to participate in interaction.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Example: Public Kiosk</h2>
+
+        <p>
+            A multilingual kiosk begins interaction only after detecting a participant.
+            The customer's spoken language is determined after interaction begins.
+        </p>
+
+        <div class="diagram"><pre>
+Detection
+
+↓
+
+Presence
+
+↓
+
+Identity
+Unknown
+
+↓
+
+Participation
+Customer
+
+↓
+
+Language Detection
+
+↓
+
+Interaction Begins
+</pre>
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Agency Principle</h2>
+
+        <div class="callout">
+
+            <p>
+                Interaction cannot occur until one or more participants have been detected.
+                Agency primitives establish who is interacting before any information,
+                behavior, or temporal progression can be described.
+            </p>
+
+        </div>
+
+    </section>
+
+    <nav class="next-nav">
+
+        <a href="/#framework">
+
+            <strong>Back</strong>
+
+            h/ai Framework
+
+        </a>
+
+        <a href="domain.html">
+
+            <strong>Next Volume</strong>
+
+            Domain Primitives
+
+        </a>
+
+    </nav>
+
+</main>
+
+</body>
+</html>

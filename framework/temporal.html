@@ -6,77 +6,287 @@
     <title>h/ai Primitive Language — Volume V: Temporal Primitives</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
+
 <main class="site-shell">
-    <nav class="spec-nav"><a href="/#framework">← h/ai Framework</a>
-        <div><a href="information.html">Information →</a> <a href="behavioral.html">Behavioral →</a></div>
+
+    <nav class="spec-nav">
+        <a href="/#framework">← h/ai Framework</a>
+        <div>
+            <a href="behavioral.html">← Behavioral</a>
+            <a href="/#framework">Framework</a>
+        </div>
     </nav>
-    <header class="spec-header"><p class="eyebrow">H/AI Primitive Language</p>
+
+    <header class="spec-header">
+
+        <p class="eyebrow">h/ai Primitive Language</p>
+
         <h1>Volume V<br>Temporal Primitives</h1>
-        <p class="subtitle">Temporal primitives describe how Human–AI interaction is organized, traversed, interrupted,
-            resumed, committed, and remembered across time.</p>
-        <div class="spec-meta"><span>Draft v1.2</span><span>Volume V</span><span>Temporal Structure</span></div>
+
+        <p class="subtitle">
+            Temporal primitives describe how interaction progresses through time,
+            creating an ordered history of state transitions, traversal, and commitment.
+        </p>
+
+        <div class="spec-meta">
+            <span>Draft v0.2</span>
+            <span>Volume V</span>
+            <span>Temporal</span>
+        </div>
+
     </header>
-    <section class="section"><h2>Overview</h2>
-        <p>The temporal family defines the structure of interaction as it unfolds. It provides a vocabulary for locating
-            an interaction in time, recording state change, preserving continuity, and returning to prior interaction
-            positions after interruption.</p>
-        <p>These primitives are intentionally domain-independent. They can describe conversational systems, adaptive
-            interfaces, educational sequences, reservation workflows, readings, visual experiences, task execution, and
-            long-duration Human–AI interaction.</p></section>
-    <section class="section"><h2>Primitive Definitions</h2>
+
+    <section class="section">
+
+        <h2>Overview</h2>
+
+        <p>
+            Temporal primitives describe the progression of interaction through
+            time independently of participants, domains, information,
+            or behavior. Every observable change creates an ordered
+            temporal history that supports continuity, interruption,
+            resumption, auditing, replay, and synchronization.
+        </p>
+
+        <p>
+            Rather than defining what information exists or what decisions
+            are made, the Temporal family defines when those changes occur
+            and how they relate to one another.
+        </p>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Primitive Definitions</h2>
+
         <div class="primitive-grid">
-            <article class="primitive-card"><h3>Timestamp</h3>
-                <p>A unique temporal identifier associated with a Traversal Point.</p></article>
-            <article class="primitive-card"><h3>Sequence</h3>
-                <p>The ordered relationship between Traversal Points, defining the progression of interaction
-                    independent of elapsed time.</p></article>
-            <article class="primitive-card"><h3>Duration</h3>
-                <p>The measurable temporal interval associated with a State, Traversal, or interaction between two
-                    Traversal Points.</p></article>
-            <article class="primitive-card"><h3>Transition</h3>
-                <p>Movement from one State or Domain to another during Traversal.</p></article>
-            <article class="primitive-card"><h3>Traversal</h3>
-                <p>The sequential ordering of Traversal Points progressing forward through time.</p></article>
-            <article class="primitive-card"><h3>Commitment</h3>
-                <p>A Traversal Point at which future mutation produces external consequence.</p></article>
+
+            <article class="primitive-card">
+                <h3>Timestamp</h3>
+                <p>
+                    A unique temporal identifier associated with a State Transition.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Sequence</h3>
+                <p>
+                    The ordered relationship between State Transitions,
+                    independent of elapsed time.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Duration</h3>
+                <p>
+                    The measurable interval separating two timestamps or
+                    describing the lifetime of a state.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Transition</h3>
+                <p>
+                    Movement from one state to another resulting from an event or action.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Traversal</h3>
+                <p>
+                    Navigation through an ordered sequence of State Transitions.
+                </p>
+            </article>
+
+            <article class="primitive-card">
+                <h3>Commitment</h3>
+                <p>
+                    A Transition after which external consequence becomes irreversible.
+                </p>
+            </article>
+
         </div>
+
     </section>
 
-    <section class="section"><h2>Foundational Principle</h2>
-        <div class="callout"><p>Any mutation of State within a Domain or Sub-domain receives a Timestamp and creates a
-            new Traversal Point. Ordered Traversal Points form Traversal. Interaction history, continuity, interruption,
-            resumption, and provenance emerge from navigation through Traversal Points over time.</p></div>
-    </section>
-    <section class="section"><h2>Interaction Example</h2>
-        <p>A reading is active. A user interrupts to make a restaurant reservation. The system preserves the reading
-            state, enters the reservation domain, completes the reservation, then resumes the reading from the exact
-            Traversal Point where it was interrupted.</p>
-        <div class="diagram"><pre>Reading Domain
-    Traversal Point 04
-        State: Reading Asimov segment 3
-        Visual: laws_3.png
-        Speech: active
+    <section class="section">
 
-↓ Interruption
+        <h2>Example: Interrupted Interaction</h2>
 
-Reservation Domain
-    Traversal Point 05
-        State: Selecting restaurant
+        <p>
+            Temporal primitives preserve continuity by recording every State
+            Transition. An interruption creates a new traversal while
+            preserving the previous traversal for later resumption.
+        </p>
 
-    Traversal Point 06
-        State: Reservation confirmed
+        <div class="diagram">
 
-↓ Resumption
+<pre>Reading
 
-Reading Domain
-    Traversal Point 07
-        Generated from Traversal Point 04
-        State: Continue reading segment 3</pre>
+Transition 04
+
+State:
+Reading Chapter 3
+
+        ↓
+
+Transition 05
+
+Interruption
+
+        ↓
+
+Reservation
+
+Transition 06
+
+Reservation Started
+
+        ↓
+
+Transition 07
+
+Reservation Confirmed
+
+        ↓
+
+Traversal resumes
+
+        ↓
+
+Reading
+
+Transition 08
+
+Continue Chapter 3</pre>
+
         </div>
+
     </section>
-    <nav class="next-nav"><a href="/#framework"><strong>Back</strong>h/ai Framework</a><a
-            href="information.html"><strong>Next Volume</strong>Information Primitives</a></nav>
+
+    <section class="section">
+
+        <h2>Example: Commitment</h2>
+
+        <p>
+            Not every Transition produces external consequence.
+            Commitment distinguishes reversible interaction
+            from irreversible execution.
+        </p>
+
+        <div class="diagram">
+
+<pre>Customer Order
+
+Transition
+
+Bagel Selected
+
+        ↓
+
+Transition
+
+Spread Selected
+
+        ↓
+
+Transition
+
+Toast Preference
+
+        ↓
+
+Commitment
+
+Submit Order
+
+        ↓
+
+External Consequence
+
+Kitchen Begins Preparation</pre>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Relationship to Other Families</h2>
+
+        <div class="cards">
+
+            <article class="card">
+                <h3>Agency</h3>
+                <p>
+                    Agency determines who initiates interaction.
+                    Temporal records when interaction occurs.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Domain</h3>
+                <p>
+                    Domain defines possible states.
+                    Temporal records movement between those states.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Information</h3>
+                <p>
+                    Information defines what changes.
+                    Temporal defines when those changes occur.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Behavior</h3>
+                <p>
+                    Behavior selects decisions and actions.
+                    Temporal records their execution.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Temporal Principle</h2>
+
+        <div class="callout">
+
+            <p>
+                Every observable change within a Human–AI system creates
+                a State Transition. Ordered State Transitions produce
+                Traversal, preserve continuity, enable interruption and
+                resumption, and establish the temporal history of interaction.
+            </p>
+
+        </div>
+
+    </section>
+
+    <nav class="next-nav">
+
+        <a href="behavioral.html">
+            <strong>Previous Volume</strong>
+            Behavioral Primitives
+        </a>
+
+        <a href="/#framework">
+            <strong>Back</strong>
+            h/ai Framework
+        </a>
+
+    </nav>
+
 </main>
+
 </body>
 </html>
